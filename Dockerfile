@@ -20,4 +20,4 @@ WORKDIR mecab
 ADD ./Gemfile Gemfile
 ADD ./Gemfile.lock Gemfile.lock
 RUN bundle install
-CMD ruby app/app.rb
+CMD bundle install && ruby app/app.rb
