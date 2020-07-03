@@ -1,0 +1,11 @@
+repos:
+- repo: local
+  hooks:
+  - id: rubocop
+    entry: docker-compose run mecab rubocop
+    name: rubocop
+    language: ruby
+    types: []
+    args: ['--color', '--only-recognized-file-types']
+
+    
