@@ -7,5 +7,6 @@ repos:
     language: ruby
     types: []
     args: ['--color', '--only-recognized-file-types']
+    exclude: 'protos'
 
     

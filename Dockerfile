@@ -13,7 +13,8 @@ RUN  apt-get -y update \
     && git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git \
     && cd mecab-ipadic-neologd \
     && mkdir -p `mecab-config --dicdir`"/mecab-ipadic-neologd" \
-    && ./bin/install-mecab-ipadic-neologd -n -y -a
+    && ./bin/install-mecab-ipadic-neologd -n -y -a \
+    && gem install grpc-tools
 
 RUN bash -l -c 'echo export NEOLOGD_PATH="$(mecab-config --dicdir)/mecab-ipadic-neologd" ' >> /etc/bash.bashrc
 WORKDIR mecab
