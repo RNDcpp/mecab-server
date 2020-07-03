@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 require 'grpc'
-require_relative 'protos/app_services_pb.rb'
+require 'mecab_services_pb'
 
 def sum(first, second)
-  stub = App::App::Stub.new('mecab:8000', :this_channel_is_insecure)
-  req = App::InpNum.new(a: first, b: second)
+  stub = Mecabgrpc::MecabService::Stub.new('mecab:8000', :this_channel_is_insecure)
+  req = Mecabgrpc::InpNum.new(a: first, b: second)
   resp_obj = stub.sum(req)
   p resp_obj.result
 end

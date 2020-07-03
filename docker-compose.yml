@@ -7,6 +7,9 @@ services:
     ports:
       - "8000:8000"
   client:
-    build: ./client
+    build:
+      context: .
+      dockerfile: ./client/Dockerfile
     volumes:
       - ./client:/client
+      - ./mecab_services_pb:/client/mecab_services_pb

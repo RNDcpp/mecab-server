@@ -20,5 +20,6 @@ RUN bash -l -c 'echo export NEOLOGD_PATH="$(mecab-config --dicdir)/mecab-ipadic-
 WORKDIR mecab
 ADD ./Gemfile Gemfile
 ADD ./Gemfile.lock Gemfile.lock
+ADD ./mecab_services_pb mecab_services_pb
 RUN bundle install
-CMD bundle install && ruby app/app.rb
+CMD bundle install && bundle exec ruby app/app.rb

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'grpc'
-require_relative 'lib/protos/app_services_pb.rb'
+require 'mecab_services_pb'
 
 NEOLOGD_PATH = ENV['NEOLOGD_PATH']
 
@@ -18,9 +18,9 @@ class MecabServer
 end
 
 # mecab service
-class AppService < App::App::Service
+class AppService < Mecabgrpc::MecabService::Service
   def sum(inp_num, _unused_call)
-    App::Total.new(result: inp_num.a + inp_num.b)
+    Mecabgrpc::Total.new(result: inp_num.a + inp_num.b)
   end
 end
 

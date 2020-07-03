@@ -1,3 +1,8 @@
+PATH
+  remote: /mecab_services_pb
+  specs:
+    mecab_services_pb (1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -13,6 +18,7 @@ PLATFORMS
 
 DEPENDENCIES
   grpc
+  mecab_services_pb!
 
 BUNDLED WITH
    2.1.4

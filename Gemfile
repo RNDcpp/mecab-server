@@ -2,6 +2,7 @@
 
 source 'https://rubygems.org'
 gem 'grpc'
+gem 'mecab_services_pb', path: '/mecab/mecab_services_pb'
 
 group :development do
   gem 'pre-commit'
