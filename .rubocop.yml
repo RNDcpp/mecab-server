@@ -1,0 +1,13 @@
+inherit_from: .rubocop_todo.yml
+AllCops:
+  Exclude:
+    - "vendor/**/*" # rubocop config/default.yml
+  
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/MethodLength:
+  Max: 20

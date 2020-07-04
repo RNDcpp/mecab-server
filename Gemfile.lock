@@ -7,12 +7,15 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.1)
+    ffi (1.13.1)
     google-protobuf (3.12.2)
     googleapis-common-protos-types (1.0.5)
       google-protobuf (~> 3.11)
     grpc (1.28.0)
       google-protobuf (~> 3.11)
       googleapis-common-protos-types (~> 1.0)
+    natto (1.2.0)
+      ffi (>= 1.9.0)
     parallel (1.19.2)
     parser (2.7.1.4)
       ast (~> 2.4.1)
@@ -42,6 +45,7 @@ PLATFORMS
 DEPENDENCIES
   grpc
   mecab_services_pb!
+  natto
   pre-commit
   rubocop
 
