@@ -1,0 +1,6 @@
+[submodule "mecab_services_pb"]
+	path = mecab_services_pb
+	url = https://github.com/RNDcpp/mecab_services_pb
+[submodule "natto-grpc-server"]
+	path = natto-grpc-server
+	url = git@github.com:RNDcpp/natto-grpc-server.git
