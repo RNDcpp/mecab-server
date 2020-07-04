@@ -1,15 +1,18 @@
 version: "3.8"
 services:
   mecab:
-    build: .
+    build: ./server
     volumes:
-      - ./:/mecab
+      - ./server:/mecab
+      - ./mecab_services_pb:/mecab_services_pb
     ports:
       - "8000:8000"
   client:
-    build:
-      context: .
-      dockerfile: ./client/Dockerfile
+    build: ./client
     volumes:
       - ./client:/client
-      - ./mecab_services_pb:/client/mecab_services_pb
+      - ./mecab_services_pb:/mecab_services_pb
+  rubocop:
+    build: ./rubocop
+    volumes:
+      - ./:/app

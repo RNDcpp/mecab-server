@@ -17,8 +17,4 @@ RUN  apt-get -y update \
     && gem install grpc-tools
 
 WORKDIR mecab
-ADD ./Gemfile Gemfile
-ADD ./Gemfile.lock Gemfile.lock
-ADD ./mecab_services_pb mecab_services_pb
-RUN bundle install
-CMD export NEOLOGD_PATH="$(mecab-config --dicdir)/mecab-ipadic-neologd" && bundle install && bundle exec ruby app/app.rb
+CMD export NEOLOGD_PATH="$(mecab-config --dicdir)/mecab-ipadic-neologd" && bundle install && bundle exec ruby server.rb

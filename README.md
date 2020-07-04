@@ -11,5 +11,5 @@ docker-compose up
 
 run client script
 ```
-docker-compose run client bundle exec ruby client.rb
+docker-compose run client /bin/sh -c 'bundle install && bundle exec ruby client.rb'
 ```

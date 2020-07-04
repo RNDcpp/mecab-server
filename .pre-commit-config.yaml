@@ -2,7 +2,7 @@ repos:
 - repo: local
   hooks:
   - id: rubocop
-    entry: docker-compose run mecab rubocop
+    entry: docker-compose run rubocop bundle exec rubocop
     name: rubocop
     language: ruby
     types: []

@@ -1,5 +1,5 @@
 PATH
-  remote: mecab_services_pb
+  remote: ../mecab_services_pb
   specs:
     mecab_services_pb (1.0.0)
 
